@@ -50,11 +50,12 @@ let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 cta.alt="middle image";
 
-
+   
 
 let navList = document.querySelectorAll("a");
 navList.forEach(link =>{
 for (i = 1; i < 8; i++)  link.length
+
 Array.from(navList).forEach(link =>{
   console.log(link.tagName);
 })
@@ -78,7 +79,7 @@ button.textContent = "Get Started";
 
 
 let h4List = document.querySelectorAll("h4");
-navList.forEach(header =>{
+h4List.forEach(header =>{
   for (i = 1; i < 7; i++) header.length
   Array.from(h4List).forEach(header =>{
     console.log(header.tagName);
@@ -109,18 +110,23 @@ navList.forEach(paragraph =>{
 })
 
 
-// const newAppend = 
-// document.createElement("a");
-
-// newAppend.textContent ="Append";
-
-// siteContent.append(newAppend)
 
 
-var mydiv = document.getElementById("nav");
-var aTag = document.createElement('a');
-aTag.innerText = "link text";
+    
+   
+var newContent = document.createElement("a");    
+
+newContent.textContent = "Append";
+
+const secondaryContent = document.querySelector('nav');
+
+secondaryContent.appendChild(newContent);
 
 
+var newContent2 = document.createElement("a");    
 
+newContent2.textContent = "Prepend";
 
+const secondaryContent2 = document.querySelector('nav');
+
+secondaryContent2.prepend(newContent2);
